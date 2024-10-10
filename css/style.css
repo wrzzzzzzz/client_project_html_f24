@@ -1,0 +1,14 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    
+}
+
+.active{
+    background-color: #f1f1f1;
+}
+
+.skip a {
+    position: absolute;
+    top: -40px;
+}
