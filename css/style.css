@@ -12,3 +12,10 @@ body {
     position: absolute;
     top: -40px;
 }
+
+@media screen {
+    .main{
+        grid-column: 1 / span 2;
+    }
+
+}
