@@ -10,9 +10,11 @@ body {
 }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin-bottom: 1rem;
-    color: #00274c; 
+    color: #00274c;
 }
 
 h1 {
@@ -35,14 +37,14 @@ h3 {
 nav li {
     display: inline;
     padding-right: 20px;
-  
+
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
 }
-  
+
 nav a {
     color: black;
     font-weight: bold;
@@ -56,12 +58,14 @@ nav a {
     text-align: center;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     padding: 1rem;
 }
 
 header {
-    background-color: #00274c; 
+    background-color: #00274c;
     color: white;
     text-align: center;
 }
@@ -80,13 +84,14 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-nav ul li a:hover, nav ul li a:focus {
-    background-color: #ffcb05; 
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #ffcb05;
     color: #00274c;
 }
 
 nav ul li.active a {
-    background-color: #ffcb05; 
+    background-color: #ffcb05;
     color: #00274c;
     font-weight: bold;
 }
@@ -117,14 +122,15 @@ main {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 section {
     margin-bottom: 2rem;
 }
 
-ol, ul {
+ol,
+ul {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -157,11 +163,12 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover, footer a:focus {
+footer a:hover,
+footer a:focus {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 768px) {
+@media screen {
     body {
         font-size: 18px;
     }
@@ -177,9 +184,13 @@ footer a:hover, footer a:focus {
         display: flex;
     }
 
-    nav ul li {
+    nav ul {
         margin-right: 1rem;
         margin-bottom: 0;
+    }
+
+    li {
+        margin-right: 0.5rem;
     }
 
     main {
@@ -188,14 +199,37 @@ footer a:hover, footer a:focus {
         padding: 2rem;
     }
 
-    #life-outside-classroom ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
+    .container {
+        grid-template-columns: 50px auto 500px auto 50px;
+    }
+
+    .about,
+    .clients,
+    .method-image,
+    .contact-image {
+        grid-column: 3 / span 2;
+    }
+
+    .method,
+    .contact,
+    .about-image,
+    .clients-image {
+        grid-column: 2 / span 2;
+    }
+
+    .text-block {
+        max-height: 250px;
+        overflow: scroll;
     }
 }
 
-a:focus, button:focus {
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+a:focus,
+button:focus {
     outline: 2px solid #ffcb05;
     outline-offset: 2px;
 }
@@ -210,7 +244,8 @@ a:focus, button:focus {
         color: blue;
     }
 
-    header, footer {
+    header,
+    footer {
         background-color: black;
         color: white;
     }
