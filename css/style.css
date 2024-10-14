@@ -1,6 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #333;
     background-color: #f4f4f4;
 }
@@ -12,19 +16,44 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 30px;
+    line-height: 1.5;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
-p {
-    margin-bottom: 1rem;
+nav li {
+    display: inline;
+    padding-right: 20px;
+  
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.overview p {
+    color: white;
+    font-size: 24px;
+    padding: 0 100px;
+    text-align: center;
 }
 
 header, main, footer {
@@ -40,15 +69,6 @@ header {
 header img {
     max-width: 200px;
     margin-bottom: 1rem;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: 0.5rem;
 }
 
 nav ul li a {
@@ -150,7 +170,7 @@ footer a:hover, footer a:focus {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 2rem;
+        padding: 0;
     }
 
     nav ul {
