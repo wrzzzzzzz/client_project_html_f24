@@ -4,18 +4,11 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
 }
 
-
-h1,
-h2,
-h3 {
-    margin-bottom: 1rem;
-    color: #00274c;
-}
 
 h1 {
     font-size: 50px;
@@ -25,43 +18,17 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1.5;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.5;
 }
 
-nav li {
-    display: inline;
-    padding-right: 20px;
-
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.overview p {
-    color: white;
-    font-size: 24px;
-    padding: 0 100px;
-    text-align: center;
-}
-
-header,
-main,
-footer {
-    padding: 1rem;
+p {
+    margin-bottom: 1rem;
 }
 
 header {
@@ -72,7 +39,12 @@ header {
 
 header img {
     max-width: 200px;
-    margin-bottom: 1rem;
+    margin-bottom: 32px;
+}
+
+
+nav li {
+    margin-bottom: 0.5rem;
 }
 
 nav ul li a {
@@ -139,6 +111,10 @@ img {
     max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 figure {
@@ -168,7 +144,23 @@ footer a:focus {
     text-decoration: underline;
 }
 
-@media screen {
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
     body {
         font-size: 18px;
     }
@@ -177,20 +169,18 @@ footer a:focus {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0;
+        padding: 1rem 2rem;
     }
 
     nav ul {
         display: flex;
+        margin-right: 1rem;
     }
 
-    nav ul {
+    nav li {
+        display: inline;
         margin-right: 1rem;
         margin-bottom: 0;
-    }
-
-    li {
-        margin-right: 0.5rem;
     }
 
     main {
@@ -198,34 +188,6 @@ footer a:focus {
         margin: 2rem auto;
         padding: 2rem;
     }
-
-    .container {
-        grid-template-columns: 50px auto 500px auto 50px;
-    }
-
-    .about,
-    .clients,
-    .method-image,
-    .contact-image {
-        grid-column: 3 / span 2;
-    }
-
-    .method,
-    .contact,
-    .about-image,
-    .clients-image {
-        grid-column: 2 / span 2;
-    }
-
-    .text-block {
-        max-height: 250px;
-        overflow: scroll;
-    }
-}
-
-nav a:hover,
-nav a:focus {
-    text-decoration: underline;
 }
 
 a:focus,
