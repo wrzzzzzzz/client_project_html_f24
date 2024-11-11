@@ -50,14 +50,14 @@ header img {
 
 nav {
     width: 100%;
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
 }
 
 nav ul {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
@@ -69,7 +69,7 @@ nav li {
 }
 
 nav ul li a {
-    display: grid;
+    display: block;
     padding: 0.5rem;
     color: white;
     text-decoration: none;
@@ -111,8 +111,6 @@ header a[href="#main"]:focus {
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
     background-color: white;
     padding: 1rem;
     margin: 1rem 0;
@@ -122,7 +120,6 @@ main {
 }
 
 section {
-    grid-column: span 12;
     margin-bottom: 2rem;
 }
 
@@ -188,4 +185,98 @@ a:focus,
 button:focus {
     outline: 2px solid #ffcb05;
     outline-offset: 2px;
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .welcome-section {
+        grid-column: 1 / -1;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    header {
+        padding: 1.5rem 3.5rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    footer {
+        padding: 2rem 4rem;
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        padding: 3rem;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 2rem auto;
+    }
+
+    section {
+        grid-column: span 1;
+    }
+
+    section.full-width {
+        grid-column: span 3;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    header {
+        padding: 2rem 4rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+
+    footer {
+        padding: 3rem 5rem;
+        font-size: 1.3rem;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 2rem;
+    }
 }
