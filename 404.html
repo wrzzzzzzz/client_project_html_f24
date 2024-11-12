@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,9 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
             text-align: center;
         }
 
@@ -28,5 +31,13 @@
         <p>Oops! The page you're looking for doesn't exist.</p>
         <p>Please return to the <a href="index.html">home page</a>.</p>
     </div>
+
+    <footer>
+        <p>© Copyrights <span id="year"></span> by University of Michigan. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
