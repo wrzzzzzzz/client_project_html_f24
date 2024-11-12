@@ -73,6 +73,14 @@
 	</footer>
 	<script>
 		document.getElementById("year").innerHTML = new Date().getFullYear();
+		const colors = ["#2C3E50", "#8E44AD", "#16A085", "#E74C3C", "#34495E", "#D35400"];
+
+        const footer = document.querySelector("footer");
+
+        footer.addEventListener("click", function() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            footer.style.backgroundColor = randomColor;
+        });
 	</script>
 
 </body>
